@@ -4,7 +4,7 @@ class TransfersController < ApplicationController
   # GET /transfers
   # GET /transfers.json
   def index
-    @transfers = Transfer.all
+    @transfers = Transfer.all.order("updated_at DESC")
   end
 
   # GET /transfers/1
@@ -25,6 +25,7 @@ class TransfersController < ApplicationController
   # POST /transfers.json
   def create
     @transfer = Transfer.new(transfer_params)
+
 
     respond_to do |format|
       if @transfer.save
@@ -69,6 +70,6 @@ class TransfersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transfer_params
-      params.require(:transfer).permit(:amount, :status, :month, :year)
+      params.require(:transfer).permit(:amount, :status, :month, :year, :user_id)
     end
 end

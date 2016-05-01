@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-lg-12">
+<% if current_user.id == @transfer.user_id or current_user.admin? %>
+<% content_for :title, "Recepit Number " + @transfer.id.to_s + "- The Paigetopian Stock Market" %>
+<h2 class="page-header">Thank You!</h2>
 
 <p>
   <strong>Amount:</strong>
@@ -11,14 +15,10 @@
 </p>
 
 <p>
-  <strong>Month:</strong>
-  <%= @transfer.month %>
-</p>
 
-<p>
-  <strong>Year:</strong>
-  <%= @transfer.year %>
-</p>
 
-<%= link_to 'Edit', edit_transfer_path(@transfer) %> |
-<%= link_to 'Back', transfers_path %>
+<% if current_user.admin? %><%= link_to 'Edit', edit_transfer_path(@transfer) %> |<% end %>
+<%= link_to 'Back',"/overview" %>
+<% end %>
+</div>
+</div>

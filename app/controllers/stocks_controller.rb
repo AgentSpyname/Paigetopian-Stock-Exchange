@@ -10,7 +10,7 @@ class StocksController < ApplicationController
   # GET /stocks/1
   # GET /stocks/1.json
   def show
-    @stock.revert_to(params[:version].to_i) if params[:version]
+ 
 
   if current_user
     @total_shares = 0
@@ -32,7 +32,6 @@ class StocksController < ApplicationController
   # GET /stocks/new
   def new
     @stock = Stock.new
-    @stock.user_id = current_user.id
   end
 
   # GET /stocks/1/edit

@@ -1,12 +1,10 @@
-<% content_for :title, @stock.name + "- The Paigetopain Stock Exchange" %>
+<% content_for :title, @stock.name + "- The Paigetopian Stock Market" %>
 
 <div class="row">
   <div style="margin-top:40px;" class="col-lg-12 col-md-12 col-sm-12">
-<h1><%= @stock.name %></h1>
+<h2 class="page-header"><%= @stock.name %></h2>
 
-<p>
-  <strong>Stock Date:</strong>
-</p>
+
 <p>
   <strong>Total shares:</strong>
   <%= @stock.total_shares %>

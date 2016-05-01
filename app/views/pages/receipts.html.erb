@@ -1,17 +1,64 @@
-<% content_for :title, " My Bills - The Paigetopain Stock Exchange" %>
+<% content_for :title, " Overview - The Paigetopian Stock Market" %>
 <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
+       
+            
         <h2 class="page-header">Sales</h2>
-            <table>
-                <th>
-                    <td>Recepit Number</td>
-                    <td>Show</td>
-                </th>
-            </table>
-            <% Sale.all.each do |sale|  %>
-                <td><strong>Recepit</strong><%= sale.id %></td>
+            <table class="table">
+                <thead>
+                    <th>Recepit Number</th>
+                    <th>Show</th>
+                </thead>
+            <tbody>
+            <% Sale.where(:user_id => current_user.id).each do |sale|  %>
+                <tr>
+                <td><strong>Recepit </strong><%= sale.id %></td>
                 <td><%= link_to "View Recepit", sale %></td>
+                </tr>
+            
             <% end %>
+            </tbody>
+            </table>
+            
         <h2 class="page-header">Purchases</h2>
+        
+                    <table class="table">
+                <thead>
+                    <th>Recepit Number</th>
+                    <th>Show</th>
+                </thead>
+            <tbody>
+            <% Purchase.where(:user_id => current_user.id).each do |purchase|  %>
+                <tr>
+                <td><strong>Recepit </strong><%= purchase.id %></td>
+                <td><%= link_to "View Recepit", purchase %></td>
+                </tr>
+            
+            <% end %>
+            </tbody>
+            </table>
+            
+             <h2 class="page-haeder">Transfers</h2>
+          
+          <table class="table">
+                <thead>
+                    <th>Transfer Number</th>
+                    <th>Transfer Amount</th>
+                    <th>Transfer Status</th>
+                    <th>Show</th>
+                </thead>
+            <tbody>
+            <% Transfer.where(:user_id => current_user.id).each do |transfer|  %>
+              
+                <td><strong>Recepit </strong><%= transfer.id %></td>
+                <td><%= transfer.amount %></td>
+                <td><%= transfer.status %></td>
+                <td><%= link_to "View Recepit", transfer %></td>
+                </tr>
+            
+            <% end %>
+            </tbody>
+            </table>
+            
 </div>
 </div>

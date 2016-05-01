@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :purchases, :except => [:edit]
   resources :stocks
  devise_for :users, :controllers => { registrations: 'registrations' }
- get '/receipts' => 'high_voltage/pages#show', id: 'receipts'
+ get '/overview' => 'high_voltage/pages#show', id: 'receipts'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

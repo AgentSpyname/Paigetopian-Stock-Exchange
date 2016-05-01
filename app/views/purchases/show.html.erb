@@ -1,5 +1,5 @@
 <% if current_user.id == @purchase.user_id or current_user.admin? %>
-<% content_for :title, "Recepit Number " + @purchase.id.to_s + "- The Paigetopain Stock Exchange" %>
+<% content_for :title, "Recepit Number " + @purchase.id.to_s + "- The Paigetopian Stock Market" %>
 <div class="row">
   <div class="col-lg-12 col-md-12 col-sm-12">
 <h2 class="page-header">Thank you! Your purchase has been complete!</h2>
@@ -26,7 +26,7 @@
 </p>
 
 
-<%= link_to 'Back', purchases_path %>
+<%= link_to 'Back', "/overview" %>
 </div>
 </div>
 <% else %>

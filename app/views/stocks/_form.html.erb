@@ -11,23 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :total_shares %><br>
-    <%= f.number_field :total_shares %>
+    <%= f.number_field :total_shares, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :shares_left %><br>
-    <%= f.number_field :shares_left %>
-  </div>
-  <div class="field">
+  
+  <div class="form-group">
     <%= f.label :value %><br>
-    <%= f.number_field :value %>
+    <%= f.number_field :value, class: 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Save", class: 'btn btn-primary' %>
   </div>
 <% end %>

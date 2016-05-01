@@ -1,6 +1,11 @@
-<h1>Editing Stock</h1>
+<div class="row">
+    <div class="col-lg-12">
+        <% if current_user.admin? %>
+<h2 class="page-header">Edit Stock</h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @stock %> |
 <%= link_to 'Back', stocks_path %>
+<% end %>
+    </div>
+</div>
