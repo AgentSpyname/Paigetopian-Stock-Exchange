@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  total_shares: 1
+  shares_left: 1
+  value: 1
+
+two:
+  name: MyString
+  total_shares: 1
+  shares_left: 1
+  value: 1

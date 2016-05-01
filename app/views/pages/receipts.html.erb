@@ -1,0 +1,17 @@
+<% content_for :title, " My Bills - The Paigetopain Stock Exchange" %>
+<div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12">
+        <h2 class="page-header">Sales</h2>
+            <table>
+                <th>
+                    <td>Recepit Number</td>
+                    <td>Show</td>
+                </th>
+            </table>
+            <% Sale.all.each do |sale|  %>
+                <td><strong>Recepit</strong><%= sale.id %></td>
+                <td><%= link_to "View Recepit", sale %></td>
+            <% end %>
+        <h2 class="page-header">Purchases</h2>
+</div>
+</div>

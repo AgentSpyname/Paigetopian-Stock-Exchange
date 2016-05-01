@@ -1,0 +1,8 @@
+<!-- Core CSS - Include with every page -->
+    <link href="https://raw.githubusercontent.com/AgentSpyname/Siminta/master/assets//plugins/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="https://raw.githubusercontent.com/AgentSpyname/Siminta/master/assets//font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="https://raw.githubusercontent.com/AgentSpyname/Siminta/master/assets//plugins/pace/pace-theme-big-counter.css" rel="stylesheet" />
+    <link href="https://raw.githubusercontent.com/AgentSpyname/Siminta/master/assets//css/style.css" rel="stylesheet" />
+    <link href="https://raw.githubusercontent.com/AgentSpyname/Siminta/master/assets//css/main-style.css" rel="stylesheet" />
+    <!-- Page-Level CSS -->
+    <link href="https://raw.githubusercontent.com/AgentSpyname/Siminta/master/assets//plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />

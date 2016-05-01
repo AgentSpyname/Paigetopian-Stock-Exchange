@@ -1,0 +1,35 @@
+<% if current_user.id == @sale.user_id or current_user.admin? %>
+<% content_for :title, "Recepit Number " + @sale.id.to_s + "- The Paigetopain Stock Exchange" %>
+<div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12">
+<h2 class="page-header">Thank you! Your sa;e has been complete!</h2>
+
+
+<p>
+  <strong>Billed To:</strong>
+  <%= @sale.user.name %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @sale.stock.name %>
+</p>
+
+<p>
+  <strong>Shares Sold:</strong>
+  <%= @sale.shares %>
+</p>
+
+<p>
+  <strong>Profit:</strong>
+  <%= @sale.profit %>
+</p>
+
+
+<%= link_to 'Back', purchases_path %>
+</div>
+</div>
+
+<% else %>
+<h2 class="page-header">Sorry you do not have permission to view this data.</h2>
+<% end %>

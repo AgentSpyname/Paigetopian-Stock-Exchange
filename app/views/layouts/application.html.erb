@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <%= render 'layouts/head' %>
+    
+  </head>
+  
+  <body>
+    <div id="wrapper">
+      <%= render 'layouts/header' %>
+        <div id="page-wrapper">
+          <%= yield %>
+        </div>
+    </div>
 
-<%= yield %>
+    <!-- Core Scripts - Include with every page -->
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//plugins/jquery-1.10.2.js"></script>
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//plugins/pace/pace.js"></script>
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//scripts/siminta.js"></script>
+    <!-- Page-Level Plugin Scripts-->
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//plugins/morris/raphael-2.1.0.min.js"></script>
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//plugins/morris/morris.js"></script>
+    <script src="https://rawgit.com/AgentSpyname/Siminta/master/assets//scripts/dashboard-demo.js"></script>
+    
+    <!-- Bootstrap Dropdowns -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/i18n/defaults-*.min.js"></script>
+  
 
 </body>
 </html>
