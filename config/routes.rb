@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
+ 
+
   resources :transfers
   resources :sales, :except => [:edit]
   resources :purchases, :except => [:edit]
   resources :stocks
  devise_for :users, :controllers => { registrations: 'registrations' }
  get '/overview' => 'high_voltage/pages#show', id: 'receipts'
+ 
+ scope "/admin" do
+   resources :users, :except => [:new, :create, :destroy] 
+end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

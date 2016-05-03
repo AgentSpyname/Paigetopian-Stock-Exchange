@@ -1,0 +1,26 @@
+<% content_for :title, "All Users - The Paigetopian Stock Market" %>
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">All Users</h2>
+        <table class="table"> 
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Account Balance</th>
+                <th>Account Balance Out</th>
+                <th>Edit</th>
+            </thead>
+     <tbody>
+        <% @users.each do |user| %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.account_balance %></td>
+            <td><%= user.account_balance_out %></td>
+            <td><%= link_to "Edit", edit_user_path(user) %></td>
+        </tr>
+        </tbody>
+        <% end %>
+        </table>
+    </div>
+</div>
