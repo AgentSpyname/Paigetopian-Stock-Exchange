@@ -9,6 +9,11 @@ before_save do
       self.stock_id = 0
 end
 
+if self.stock.shares_left > self.shares
+    self.user_id = 0
+end
+
+
 if self.user.account_balance > self.profit and self.shares < self.stock.shares_left
     b = self.user.account_balance - self.profit
     self.user.update_attributes(:account_balance => b)
