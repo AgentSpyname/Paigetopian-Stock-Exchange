@@ -14,7 +14,7 @@ if self.stock.shares_left < self.shares
 end
 
 
-if self.user.account_balance > self.profit and self.shares < self.stock.shares_left
+if self.user.account_balance >= self.profit and self.shares <= self.stock.shares_left
     b = self.user.account_balance - self.profit
     self.user.update_attributes(:account_balance => b)
     sharesleft = self.stock.shares_left - self.shares
