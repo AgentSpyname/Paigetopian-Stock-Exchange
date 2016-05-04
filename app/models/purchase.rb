@@ -9,7 +9,7 @@ before_save do
       self.stock_id = 0
 end
 
-if self.stock.shares_left > self.shares
+if self.stock.shares_left < self.shares
     self.user_id = 0
 end
 
